@@ -1,3 +1,5 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace EFCoreExercise.Entities;
 
 public class BuyOrder
@@ -6,10 +8,10 @@ public class BuyOrder
     public Guid BuyOrderID { get; set; }
 
     [Required]
-    public string StockSymbol { get; set; }
+    public string? StockSymbol { get; set; }
 
     [Required]
-    public string StockName { get; set; }
+    public string? StockName { get; set; }
 
     [DataType(DataType.DateTime)]
     public DateTime DateAndTimeOfOrder { get; set; }
